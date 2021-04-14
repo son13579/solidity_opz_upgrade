@@ -1,0 +1,13 @@
+{
+  "name": "opz_upgrade",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/son13579/solidity_opz_upgrade.git",
+  "author": "thanhnv2 <thanhnv2@vnext.com.vn>",
+  "license": "MIT",
+  "devDependencies": {
+    "@openzeppelin/truffle-upgrades": "^1.5.0",
+    "chai": "^4.3.4",
+    "truffle": "^5.3.1"
+  }
+}
