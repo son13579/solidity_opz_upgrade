@@ -13,6 +13,7 @@ contract('BoxV2 (proxy)', function () {
   beforeEach(async function () {
     // Deploy a new Box contract for each test
     this.box = await deployProxy(Box, [42], {initializer: 'store'});
+    // await this.box.setData();
     this.boxV2 = await upgradeProxy(this.box.address, BoxV2);
   });
  
@@ -24,5 +25,6 @@ contract('BoxV2 (proxy)', function () {
     // Test if the returned value is the same one
     // Note that we need to use strings to compare the 256 bit integers
     expect((await this.boxV2.retrieve()).toString()).to.equal('43');
+    expect((await this.boxV2.data()).toString()).to.equal('5');
   });
 });

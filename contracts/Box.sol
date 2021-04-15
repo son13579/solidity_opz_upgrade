@@ -4,6 +4,7 @@ pragma solidity ^0.7.0;
  
 contract Box {
     uint256 private value;
+    uint256 private data;
  
     // Emitted when the stored value changes
     event ValueChanged(uint256 newValue);
